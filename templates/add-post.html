@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Add post</h1>
+
+    <form method="post" action="/add-post">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" required name="title">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" class="form-control" required name="author">
+      </div>
+
+        <div class="mb-3">
+        <label class="form-label">Post content</label>
+            <textarea type="text" class="form-control" required rows="10" name="content"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success">Add Post</button>
+        <a class="btn btn-danger" href="/">Cancel</a>
+    </form>
+{% endblock content %}
